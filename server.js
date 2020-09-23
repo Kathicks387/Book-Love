@@ -29,7 +29,7 @@ app.use(bodyParser.urlencoded({ limit: '10mb', extended: false}))
 const mongoose = require('mongoose');
 
 //establishes connection to mongoose
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/booklovedb", { useNewUrlParser: true });
+mongoose.connect(process.env.MONGODB_URL || "mongodb://localhost/booklovedb", { useNewUrlParser: true });
 
 //determines if we are logged into database
 const db = mongoose.connection
